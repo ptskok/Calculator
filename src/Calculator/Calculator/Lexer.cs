@@ -17,15 +17,45 @@ namespace Calculator
 
         public Token NextToken()
         {
-            if (Char.IsDigit((char) _current))
+            if (char.IsDigit((char) _current))
             {
                 return HandleNumber();
+            }
+
+            switch (_current)
+            {
+                case '+':
+                    Consume();
+                    return new Token(TokenType.Plus);
+                case '-':
+                    Consume();
+                    return new Token(TokenType.Minus);
+                case '*':
+                    Consume();
+                    return new Token(TokenType.Multiplication);
+                case '/':
+                    Consume();
+                    return new Token(TokenType.Division);
+                case '(':
+                    Consume();
+                    return new Token(TokenType.LeftBracket);
+                case ')':
+                    Consume();
+                    return new Token(TokenType.RightBracket);
+                default:
+                    throw new CalculatorException("Unexpected symbol!");
             }
         }
 
         private Token HandleNumber()
         {
-            throw new NotImplementedException();
+            StringBuilder stringBuilder = new();
+            while (char.IsDigit((char)_current))
+            {
+                stringBuilder.Append((char) _current);
+                Consume();
+            }
+            return new Token(TokenType.Number,stringBuilder.ToString());
         }
         private void Consume()
         {
