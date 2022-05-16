@@ -10,13 +10,26 @@ namespace Calculator
     {
         private int _current;
 
+        public Lexer()
+        {
+            Consume();
+        }
+
         public Token NextToken()
+        {
+            if (Char.IsDigit((char) _current))
+            {
+                return HandleNumber();
+            }
+        }
+
+        private Token HandleNumber()
         {
             throw new NotImplementedException();
         }
         private void Consume()
         {
-
+            _current = Console.Read();
         }
     }
 }
