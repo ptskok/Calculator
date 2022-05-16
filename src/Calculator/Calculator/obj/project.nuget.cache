@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ejWQVNC/0PFHpNMQHPWfBtjHGW3vf8WId99/7LipMnp3SdpXa75Tm8xbaoAq+Hkp+6P4fkLX6hN6/3LFa7FUpA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ptsko\\OneDrive\\Počítač\\VSCODES\\GITHUB (PROFFESIONAL)\\Calculator\\src\\Calculator\\Calculator\\Calculator.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ptsko\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.14\\microsoft.netcore.app.host.win-x64.5.0.14.nupkg.sha512"
+  ],
+  "logs": []
+}
