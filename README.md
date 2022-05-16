@@ -7,6 +7,6 @@ It covers:
 - brackets
 
 Grammar:<br />
-E -> T {"+"|"-"T}<br />
-T -> S {"*"|"/"S}<br />
-S -> number | "("E")"
+Expr -> Mul {"+"|"-"Mul}<br />
+Mul -> Term {"*"|"/"Term}<br />
+Term -> number | "("Expr")"
