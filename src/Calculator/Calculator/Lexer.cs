@@ -15,7 +15,7 @@ namespace Calculator
             Consume();
         }
 
-        public Token NextToken()
+        public Token NextToken() 
         {
             if (char.IsDigit((char) _current))
             {
@@ -24,6 +24,9 @@ namespace Calculator
 
             switch (_current)
             {
+                case ' ':
+                case '\t':
+                    return NextToken();
                 case '+':
                     Consume();
                     return new Token(TokenType.Plus);
@@ -42,8 +45,11 @@ namespace Calculator
                 case ')':
                     Consume();
                     return new Token(TokenType.RightBracket);
+                case '\n':
+                case '\r':
+                    return new Token(TokenType.EOF);
                 default:
-                    throw new CalculatorException("Unexpected symbol!");
+                    throw new CalculatorException("Unexpected symbol! ["+_current+"]");
             }
         }
 

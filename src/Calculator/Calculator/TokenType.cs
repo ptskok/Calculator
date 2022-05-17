@@ -14,6 +14,7 @@ namespace Calculator
         Multiplication,
         Division,
         LeftBracket,
-        RightBracket
+        RightBracket,
+        EOF
     }
 }
