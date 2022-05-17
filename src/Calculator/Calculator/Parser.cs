@@ -70,8 +70,10 @@ namespace Calculator
                     value = int.Parse(_current.Attribute);
                     Consume();
                     break;
+                case TokenType.EOF:
+                    return value;
                 default:
-                    throw new CalculatorException("Unexpected behaviour!");
+                    throw new CalculatorException("Unexpected behaviour! - ["+_current.Type + "]");
             }
             return value;
         }
