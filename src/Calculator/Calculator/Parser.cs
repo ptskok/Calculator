@@ -59,6 +59,11 @@ namespace Calculator
                 case TokenType.LeftBracket:
                     Consume();
                     value = Expr();
+                    if (_current.Type != TokenType.RightBracket)
+                    {
+                        throw new CalculatorException("Syntax error! Expected ) but got [" + _current.Type + "]");
+                    }
+                    Consume();
                     break;
                 case TokenType.Number:
                 //case TokenType.Minus:
