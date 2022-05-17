@@ -3,38 +3,100 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+/*
+Expr->Mul { "+" | "-"Mul}
+Mul->Term { "*" | "/"Term}
+Term->number | "("Expr ")"
+*/
 namespace Calculator
 {
     public class Parser
     {
         private Token _current;
-        private Lexer _lexer;
+        private readonly Lexer _lexer;
         private int result;
 
+        public Parser(Lexer lexer)
+        {
+            _lexer = lexer;
+        }
         public int Result()
         {
-            throw new NotImplementedException();
+            Consume();
+            result = Expr();
+            return result;
         }
 
         private int Mul()
         {
-            throw new NotImplementedException();
+            //Mul->Term { "*" | "/"Term}
+            int value = Term();
+            while (_current.Type == TokenType.Multiplication || _current.Type == TokenType.Division)
+            {
+                switch (_current.Type)
+                {
+                    case TokenType.Division:
+                        Consume();
+                        value /= Term();
+                        break;
+                    case TokenType.Multiplication:
+                        Consume();
+                        value *= Term();
+                        break;
+                    default:
+                        throw new CalculatorException("Unexpected behaviour!");
+                }
+            }
+            return value;
         }
 
         private int Term()
         {
-            throw new NotImplementedException();
+            //Term -> number | "("Expr")"
+            int value;
+            switch (_current.Type)
+            {
+                case TokenType.LeftBracket:
+                    Consume();
+                    value = Expr();
+                    break;
+                case TokenType.Number:
+                //case TokenType.Minus:
+                    value = int.Parse(_current.Attribute);
+                    Consume();
+                    break;
+                default:
+                    throw new CalculatorException("Unexpected behaviour!");
+            }
+            return value;
         }
 
         private int Expr()
         {
-            throw new NotImplementedException();
+            //Expr->Mul { "+" | "-"Mul}
+            int value = Mul();
+            if (_current.Type == TokenType.Plus || _current.Type == TokenType.Minus)
+            {
+                switch (_current.Type)
+                {
+                    case TokenType.Plus:
+                        Consume();
+                        value += Mul();
+                        break;
+                    case TokenType.Minus:
+                        Consume();
+                        value -= Mul();
+                        break;
+                    default:
+                        throw new CalculatorException("Unexpected behaviour!");
+                }
+            }
+            return value;
         }
 
         private void Consume()
         {
-
+            _current = _lexer.NextToken();
         }
 
     }
