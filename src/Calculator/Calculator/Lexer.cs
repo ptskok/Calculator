@@ -28,6 +28,7 @@ namespace Calculator
                 case '\t':
                 case '\n':
                 case '\r':
+                    Consume();
                     return NextToken();
                 case '+':
                     Consume();

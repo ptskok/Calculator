@@ -72,7 +72,7 @@ namespace Calculator
         {
             //Expr->Mul { "+" | "-"Mul}
             int value = Mul();
-            if (_current.Type == TokenType.Plus || _current.Type == TokenType.Minus)
+            while (_current.Type == TokenType.Plus || _current.Type == TokenType.Minus)
             {
                 switch (_current.Type)
                 {
