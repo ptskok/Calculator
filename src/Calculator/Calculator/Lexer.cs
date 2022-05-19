@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 
 namespace Calculator
 {
     public class Lexer
     {
         private int _current;
-        private string _mathExpr;
+        private readonly string _mathExpr;
         private int _idx;
 
         public Lexer(string mathExpr)
@@ -53,7 +48,7 @@ namespace Calculator
                     Consume();
                     return new Token(TokenType.RightBracket);
                 case -1:
-                    return new Token(TokenType.EOF);
+                    return new Token(TokenType.End);
                 default:
                     throw new CalculatorException("Unexpected symbol! ["+_current+"]");
             }

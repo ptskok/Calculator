@@ -16,13 +16,6 @@ namespace Calculator
         public int Result()
         {
             Consume();
-            //result = Expr();
-            /*while (_current.Type != TokenType.EOF)
-            {
-                Console.WriteLine("["+_current.Type + "]");
-                Consume();
-            }
-            Console.WriteLine("[" + _current.Type + "]");*/
             return Expr();
         }
 
@@ -69,8 +62,6 @@ namespace Calculator
                     value = int.Parse(_current.Attribute);
                     Consume();
                     break;
-               /* case TokenType.EOF:
-                    return value;*/
                 default:
                     throw new CalculatorException("Unexpected behaviour! - ["+_current.Type + "]");
             }
