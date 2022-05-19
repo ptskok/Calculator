@@ -71,7 +71,7 @@ namespace Calculator
         }
         private void Consume()
         {
-            if (_idx == _mathExpr.Length - 1)
+            if (_idx == _mathExpr.Length )
             {
                 _current = -1;
             }

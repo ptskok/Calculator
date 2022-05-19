@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-/*
+﻿/*
 Expr->Mul { "+" | "-"Mul}
 Mul->Term { "*" | "/"Term}
 Term->number | "("Expr ")"
@@ -14,8 +9,6 @@ namespace Calculator
     {
         private Token _current;
         private readonly Lexer _lexer;
-        private int result;
-
         public Parser(Lexer lexer)
         {
             _lexer = lexer;
@@ -23,8 +16,14 @@ namespace Calculator
         public int Result()
         {
             Consume();
-            result = Expr();
-            return result;
+            //result = Expr();
+            /*while (_current.Type != TokenType.EOF)
+            {
+                Console.WriteLine("["+_current.Type + "]");
+                Consume();
+            }
+            Console.WriteLine("[" + _current.Type + "]");*/
+            return Expr();
         }
 
         private int Mul()
@@ -70,8 +69,8 @@ namespace Calculator
                     value = int.Parse(_current.Attribute);
                     Consume();
                     break;
-                case TokenType.EOF:
-                    return value;
+               /* case TokenType.EOF:
+                    return value;*/
                 default:
                     throw new CalculatorException("Unexpected behaviour! - ["+_current.Type + "]");
             }
@@ -100,11 +99,9 @@ namespace Calculator
             }
             return value;
         }
-
         private void Consume()
         {
             _current = _lexer.NextToken();
         }
-
     }
 }
