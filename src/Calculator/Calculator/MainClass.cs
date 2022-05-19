@@ -9,6 +9,7 @@ namespace Calculator
             string mathExpr = Console.ReadLine();
             Parser parser = new(new Lexer(mathExpr));
             Console.WriteLine(parser.Result());
+            Console.ReadKey();
         }
     }
 }

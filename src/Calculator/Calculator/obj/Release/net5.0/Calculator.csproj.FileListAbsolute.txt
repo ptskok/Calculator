@@ -1,0 +1,16 @@
+C:\Users\ptsko\OneDrive\Počítač\VSCODES\GITHUB (PROFFESIONAL)\Calculator\src\Calculator\Calculator\bin\Release\net5.0\Calculator.exe
+C:\Users\ptsko\OneDrive\Počítač\VSCODES\GITHUB (PROFFESIONAL)\Calculator\src\Calculator\Calculator\bin\Release\net5.0\Calculator.deps.json
+C:\Users\ptsko\OneDrive\Počítač\VSCODES\GITHUB (PROFFESIONAL)\Calculator\src\Calculator\Calculator\bin\Release\net5.0\Calculator.runtimeconfig.json
+C:\Users\ptsko\OneDrive\Počítač\VSCODES\GITHUB (PROFFESIONAL)\Calculator\src\Calculator\Calculator\bin\Release\net5.0\Calculator.runtimeconfig.dev.json
+C:\Users\ptsko\OneDrive\Počítač\VSCODES\GITHUB (PROFFESIONAL)\Calculator\src\Calculator\Calculator\bin\Release\net5.0\Calculator.dll
+C:\Users\ptsko\OneDrive\Počítač\VSCODES\GITHUB (PROFFESIONAL)\Calculator\src\Calculator\Calculator\bin\Release\net5.0\ref\Calculator.dll
+C:\Users\ptsko\OneDrive\Počítač\VSCODES\GITHUB (PROFFESIONAL)\Calculator\src\Calculator\Calculator\bin\Release\net5.0\Calculator.pdb
+C:\Users\ptsko\OneDrive\Počítač\VSCODES\GITHUB (PROFFESIONAL)\Calculator\src\Calculator\Calculator\obj\Release\net5.0\Calculator.csproj.AssemblyReference.cache
+C:\Users\ptsko\OneDrive\Počítač\VSCODES\GITHUB (PROFFESIONAL)\Calculator\src\Calculator\Calculator\obj\Release\net5.0\Calculator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ptsko\OneDrive\Počítač\VSCODES\GITHUB (PROFFESIONAL)\Calculator\src\Calculator\Calculator\obj\Release\net5.0\Calculator.AssemblyInfoInputs.cache
+C:\Users\ptsko\OneDrive\Počítač\VSCODES\GITHUB (PROFFESIONAL)\Calculator\src\Calculator\Calculator\obj\Release\net5.0\Calculator.AssemblyInfo.cs
+C:\Users\ptsko\OneDrive\Počítač\VSCODES\GITHUB (PROFFESIONAL)\Calculator\src\Calculator\Calculator\obj\Release\net5.0\Calculator.csproj.CoreCompileInputs.cache
+C:\Users\ptsko\OneDrive\Počítač\VSCODES\GITHUB (PROFFESIONAL)\Calculator\src\Calculator\Calculator\obj\Release\net5.0\Calculator.dll
+C:\Users\ptsko\OneDrive\Počítač\VSCODES\GITHUB (PROFFESIONAL)\Calculator\src\Calculator\Calculator\obj\Release\net5.0\ref\Calculator.dll
+C:\Users\ptsko\OneDrive\Počítač\VSCODES\GITHUB (PROFFESIONAL)\Calculator\src\Calculator\Calculator\obj\Release\net5.0\Calculator.pdb
+C:\Users\ptsko\OneDrive\Počítač\VSCODES\GITHUB (PROFFESIONAL)\Calculator\src\Calculator\Calculator\obj\Release\net5.0\Calculator.genruntimeconfig.cache
